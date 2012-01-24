@@ -481,7 +481,7 @@
         	break;
         case 'text':
         default:
-          echo '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="'. THEME_OPTIONS . '[' . $id . ']" placeholder="' . $std . '" value="' . esc_attr( $options[$id] ) . '" />';
+          echo '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="'. THEME_OPTIONS . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" />';
           if ($desc != ''){
             echo '<span class="description">' . $desc. '</span>';
           }

@@ -1,0 +1,429 @@
+/*
+Theme Name: Stark
+
+Description: Stark: Clean, Minimal, Simple.
+
+Version: 1.0
+
+Author: Andrew Walker
+
+Author URI: www.awalker.ca
+
+*/
+
+/* container elements */
+html, body {
+  height: 100%;
+}
+
+body{
+    font-size:62.5%; /*set font size such that 1em = 10px; */
+}
+
+/* fix for Opera, sticky footer */
+body:before{
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+#container {
+  min-height: 100%;
+}
+
+#container, #footer {
+  width: 96em;
+  margin: 0 auto;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 5em; /* Same as Footer's Height */
+}
+
+#header {
+  margin: 0 1em;
+  min-height: 6em;
+  clear: both;
+	font-family: Geneva, Verdana, "Lucida Sans", "Lucida Grande", sans-serif;
+}
+
+#footer {
+  position: relative;
+  margin-top: -5em; /* - Footer Height */
+  height: 5em;
+  clear: both;
+  background: #d8d8d8;
+}
+
+#footer .footer_widgets{
+  height: 12em;
+}
+
+.page {
+  width:70em;
+  margin-bottom: 2em;
+}
+
+
+.sidebar{
+	width:22em;
+	margin-bottom: 2em;
+}
+
+.page.position-full{
+	width:99.9%;
+}
+
+.sidebar.position-left{
+	float:left;
+	margin-left: 1em;
+}
+.sidebar.position-right{
+	float:right;
+	margin-right:1em;
+}
+.page.position-left{
+	float:left;
+
+	margin-left: 1em;
+}
+.page.position-right{
+	float:right;
+
+	margin-right: 1em;
+}
+
+/* Main Menu */
+
+#header_main_menu {
+  clear:both;
+  width: 100%;
+}
+
+#header_main_menu, #header_main_menu > ul > li > a{
+  height: 3em;
+}
+
+#header_main_menu ul {
+  list-style: none; 
+}
+#header_main_menu > ul {
+  display: block; 
+}
+
+#header_main_menu > ul > li {
+  float: left;
+  display: inline;
+  margin: 0 0 0 2em; 
+}
+#header_main_menu > ul > li:first-child {
+  margin-left: 0em; 
+}
+#header_main_menu > ul > li.sub_hover a {
+  background: #334d61; 
+}
+#header_main_menu > ul > li > a {
+  width: 10em;
+  display: block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  position: relative; 
+  padding: 0 1em;
+}
+#header_main_menu > ul > li > a span {
+  display: block;
+  line-height: 2.5em; 
+  font-size: 1.2em;
+}
+#header_main_menu .sub-menu {
+  clear: both;
+  position: absolute;
+  display: none;
+  width: 10em;
+  background-color: #334d61;
+  z-index: 99; 
+}
+#header_main_menu .sub-menu li {
+  background: #334d61;
+  float: left; 
+}
+#header_main_menu .sub-menu li a {
+  color: white;
+  padding: 0.8em 1em;
+  display: block;
+  width: 10em;
+}
+#header_main_menu .sub-menu li a:hover {
+  text-decoration: none; 
+}
+
+
+/* Footer Menu */
+
+#footer_main_menu {
+  clear:both;
+  width: 100%;
+}
+
+#footer_main_menu, #footer_main_menu > ul > li > a{
+  height: 2em;
+}
+
+#footer_main_menu ul {
+  list-style: none; 
+}
+#footer_main_menu > ul {
+  display: block; 
+}
+
+#footer_main_menu > ul > li {
+  float: left;
+  display: inline;
+  margin: 0 0 0 2em; 
+}
+#footer_main_menu > ul > li:first-child {
+  margin-left: 0em; 
+}
+#footer_main_menu > ul > li.sub_hover a {
+  background: #334d61; 
+}
+#footer_main_menu > ul > li > a {
+  display: block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  position: relative; 
+  padding: 0 1em;
+}
+#footer_main_menu > ul > li > a span {
+  display: block;
+  line-height: 2em; 
+}
+#footer_main_menu .sub-menu {
+  display: none;
+}
+
+/* Social Menu */
+
+ul#social_menu{
+  float: right;
+}
+
+ul#social_menu li{
+  float: left;
+  margin: 1em 1em 1em;
+}
+
+/* Column View */
+
+.position-full .three_columns .column {
+  width: 30em;
+}
+
+.position-left .three_columns .column, .position-right .three_columns .column {
+  width: 22em;  
+}
+
+.position-full .two_columns .column {
+  width: 46em;
+}
+
+.position-left .two_columns .column, .position-right .two_columns .column {
+  width: 34em;
+}
+
+
+
+.column {
+  float: left;
+  background: cyan;
+  margin-left:2em;
+}
+
+.position-left .three_columns .column:first-child, .position-right .three_columns .column:first-child{
+  margin-left: 0;
+}
+.position-full .column:first-child{
+  margin-left: 1em;
+}
+
+.position-left .two_columns .column:first-child, .position-right .two_columns .column:first-child{
+  margin-left: 0;
+}
+
+/* Advertising */
+
+.ad{
+  background-color: green;
+  margin: 2em auto;
+}
+
+.ad.rectangle{
+  width: 180px;
+  height: 150px;
+  overflow: hidden;
+}
+
+#leaderboard_ad{
+  clear: both;
+}
+.leaderboard{
+  width: 790px;
+  height:90px;
+  overflow: hidden; 
+}
+
+
+
+
+/* global styling */
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+/* Global colour scheme
+
+*/
+
+/* Header */
+#header h1{
+	font-size:2em;
+	float:left;
+}
+
+#header h2{
+clear:right;
+float:left;
+	font-size:1.2em;
+	margin:0em 0em 0em 1em;
+	line-height:2.1em;
+	font-weight:normal;
+}
+
+
+/* Light Scheme */
+.light{
+	background-color:#e8e8e8;
+}
+
+.light #header h1{
+
+}
+.light #header h1 a{
+	color:#4e4e4e;
+}
+
+.light #all {
+	background-color: #f3f3f3;
+}
+.light .sidebar{
+	border-color:#6e6e6e;
+}
+.light #menu-top-menu a:link{
+	color:#4e4e4e;
+}
+.light #menu-top-menu a:visited{
+	color:#4e4e4e;
+}
+.light #menu-top-menu a:hover{
+	color:#a2a2a2;
+}
+.light #menu-top-menu a:active{
+	
+}
+
+/* Dark Scheme */
+.dark {
+  background-color:#3e3e3e;
+  color: #fefefe;
+}
+
+
+/* general text formatting */
+h2.title{
+	font-size:2em;
+}
+.entry>p, .entry>ul, .entry>ol {
+    font-size:1.4em;
+}
+.entry > p{
+    margin:1em;
+    line-height: 1.5em;
+}
+.entry h1{
+    padding: 1em 2.5em 0.5em 0em;
+    font-size:1.9em;
+}
+.entry h2{
+    font-size: 1.6em;
+    line-height: 2em;
+}
+.entry h3{
+    font-size: 1.4em;
+}
+.entry strong{
+    font-weight: bold;
+}
+.entry ol{
+    list-style: decimal;
+}
+.entry ul{
+    list-style: circle;
+}
+.entry ol, .entry ul{
+	padding:0em 0em 0em 3em;
+}
+.entry li{
+}
+
+.entry .alignnone {
+  margin: 0.5em 2em 2em 0em;
+}
+
+.entry .alignright{
+    float:right;
+    margin: 0.5em 0em 2em 2em;
+}
+.entry .alignleft{
+    float:left;
+    margin: 0.5em 2em 2em 0;
+}
+.entry .aligncenter {
+  display: block;
+  margin: 0.5em auto;
+}
+.entry .wp-caption{
+  background-color: #e3e3e3;
+  border: 1px solid #dddddd;
+  margin: 1em;
+  padding-top: 0.4em;
+  text-align: center;
+}
+
+.entry .wp-caption .img{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.enty .wp-caption p.wp-caption-text {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin: 0;
+  padding: 0 0.4em 0.5em;
+}
+
+
+.entry a:link{
+}
+.entry a:visited{
+}
+.entry a:hover{
+}
+.entry a:active{
+}

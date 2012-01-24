@@ -1,0 +1,76 @@
+.featured_content{
+	position:relative;
+	width: 100%;
+}
+
+.featured_content, .content_summary_list, .content_list{
+  height:18em;
+}
+
+.featured_content ol.position-right{
+  right: 0;
+}
+
+.featured_content ol.position-left{
+  left: 0;
+}
+
+.featured_content div.position-right{
+  margin-left: 20%;
+}
+
+.featured_content div.position-left{
+  margin-left: 0;
+}
+
+.featured_content .ui-tabs-nav{
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  list-style: none;
+  width: 20%;
+  z-index: 2;
+}
+
+.featured_content .ui-tabs-nav li{
+  color: blue;
+}
+
+.featured_content .ui-tabs-nav li span{
+  line-height: 1.5em;
+}
+
+.featured_content .ui-tabs-panel{
+  width: 80%;
+  height: 100%;
+  display: block;
+  position: relative;
+  background: grey;
+  overflow: hidden;
+}
+.featured_content .ui-tabs-hide{
+  display: none;
+}
+
+.featured_content .ui-tabs-nav-item a{
+  display: block;
+  outline: none;
+  height: 100%;
+}
+
+.featured_content .ui-tabs-nav-item a:hover{
+  font-weight: bold;
+}
+
+.featured_content .ui-tabs-selected{
+  background: yellow;
+}
+
+.featured_content .featured_post_content{
+  float: left;
+  padding: 1em;
+}
+.featured_content .call_to_action{
+
+  background: red;
+}

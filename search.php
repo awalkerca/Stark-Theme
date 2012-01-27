@@ -1,7 +1,6 @@
 <?php get_header(); ?>
   <div class="page <?= get_page_location() ?>">
     <div id="content">
-    <?php wp_nav_menu(array('theme_location' => 'page-menu')); ?>
     <?php if(have_posts()) : ?>
       <?php while(have_posts()) : the_post(); ?>
         <div class="post" id="post-<?php the_id();?> ">

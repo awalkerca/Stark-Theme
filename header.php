@@ -1,30 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html <?php language_attributes(); ?>>
   <head>
     
     <?php
-    /* 
-     * Include this file when needing javascript + css into head of page
-     */
+      wp_enqueue_style( 'reset', get_bloginfo('template_url') . '/assets/css/reset.css');
+      wp_enqueue_style('theme_style', get_bloginfo('stylesheet_url'),'reset');
+      
+      wp_enqueue_script('jquery');
+      wp_enqueue_script('theme_script', get_bloginfo('template_url') . '/assets/js/main.js','jquery');
     ?>
-    <?php
-    /*
-    wp_register_style('reset', get_bloginfo('template_url') . '/css/reset.css');
-    wp_enqueue_style( 'reset');
-
-    wp_register_style('theme_style', get_bloginfo('stylesheet_url'),array('reset'));
-    wp_enqueue_style( 'theme_style');
-    */
-    ?>
-
-    <link type="text/css" href="<?php bloginfo('template_url');?>/assets/css/reset.css" rel="Stylesheet"  media="screen"/>
-    <link type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" rel="Stylesheet" media="screen" />
-
-    <!-- latest jQuery direct from google's CDN -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/main.js"></script>
     
     <?php wp_head(); ?>
 		<?php

@@ -62,7 +62,7 @@
               }
             ?>            
           </div>
-          <div class="comments_template">
+          <div id="comments" class="comments">
             <?php comments_template(); ?>
           </div>
         </div>

@@ -28,11 +28,8 @@
       <?php wp_title(); ?>
     </title>
   </head>
-   	<?php
-		  $colour_scheme = theme_option('colour_scheme'); 
-	  ?>	
-	
-	<body class="<?= strtolower($colour_scheme); ?>">
+		
+	<body <?php body_class($class); ?>>
     <div id="container">
       <div id="main">         
         <div id="header">

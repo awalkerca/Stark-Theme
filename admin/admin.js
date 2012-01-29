@@ -9,5 +9,4 @@ jQuery(document).ready(function($){
     height: '1.45em'
   });
   
-  
 });

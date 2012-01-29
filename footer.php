@@ -13,7 +13,8 @@
             'theme_location'            => 'secondary-menu',
             'container_id'              => 'footer_main_menu',
             'link_before'               => '<span>',
-            'link_after'                => '</span>'
+            'link_after'                => '</span>',
+            'depth'                     => 1
         );
            
       wp_nav_menu($footer_args); 

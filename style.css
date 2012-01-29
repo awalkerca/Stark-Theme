@@ -11,13 +11,17 @@ Author URI: www.awalker.ca
 
 */
 
-/* container elements */
+
+/*****************************************************************************
+ * Theme Layout: Enter at own risk
+*****************************************************************************/
+
 html, body {
   height: 100%;
 }
 
 body{
-    font-size:62.5%; /*set font size such that 1em = 10px; */
+  font-size:62.5%; /*set font size such that 1em = 10px; */
 }
 
 /* fix for Opera, sticky footer */
@@ -47,7 +51,6 @@ body:before{
   margin: 0 1em;
   min-height: 6em;
   clear: both;
-	font-family: Geneva, Verdana, "Lucida Sans", "Lucida Grande", sans-serif;
 }
 
 #footer {
@@ -55,25 +58,23 @@ body:before{
   margin-top: -5em; /* - Footer Height */
   height: 5em;
   clear: both;
-  background: #d8d8d8;
 }
 
 #footer .footer_widgets{
   height: 12em;
 }
 
-.page {
+.main_body {
   width:70em;
   margin-bottom: 2em;
 }
-
 
 .sidebar{
 	width:22em;
 	margin-bottom: 2em;
 }
 
-.page.position-full{
+.main_body.position-full{
 	width:99.9%;
 }
 
@@ -85,26 +86,18 @@ body:before{
 	float:right;
 	margin-right:1em;
 }
-.page.position-left{
+.main_body.position-left{
 	float:left;
-
 	margin-left: 1em;
 }
-.page.position-right{
+.main_body.position-right{
 	float:right;
-
 	margin-right: 1em;
 }
-
-/* Main Menu */
 
 #header_main_menu {
   clear:both;
   width: 100%;
-}
-
-#header_main_menu, #header_main_menu > ul > li > a{
-  height: 3em;
 }
 
 #header_main_menu ul {
@@ -112,65 +105,47 @@ body:before{
 }
 #header_main_menu > ul {
   display: block; 
+  width: 100%;
 }
 
 #header_main_menu > ul > li {
-  float: left;
+  float: left;*/
   display: inline;
   margin: 0 0 0 2em; 
 }
 #header_main_menu > ul > li:first-child {
   margin-left: 0em; 
 }
-#header_main_menu > ul > li.sub_hover a {
-  background: #334d61; 
-}
+
 #header_main_menu > ul > li > a {
-  width: 10em;
   display: block;
   padding: 0;
-  text-align: center;
-  text-decoration: none;
   position: relative; 
   padding: 0 1em;
 }
 #header_main_menu > ul > li > a span {
   display: block;
-  line-height: 2.5em; 
-  font-size: 1.2em;
 }
+
 #header_main_menu .sub-menu {
   clear: both;
   position: absolute;
   display: none;
-  width: 10em;
-  background-color: #334d61;
   z-index: 99; 
 }
 #header_main_menu .sub-menu li {
-  background: #334d61;
   float: left; 
 }
 #header_main_menu .sub-menu li a {
-  color: white;
   padding: 0.8em 1em;
   display: block;
-  width: 10em;
 }
-#header_main_menu .sub-menu li a:hover {
-  text-decoration: none; 
-}
-
 
 /* Footer Menu */
 
 #footer_main_menu {
   clear:both;
   width: 100%;
-}
-
-#footer_main_menu, #footer_main_menu > ul > li > a{
-  height: 2em;
 }
 
 #footer_main_menu ul {
@@ -188,26 +163,16 @@ body:before{
 #footer_main_menu > ul > li:first-child {
   margin-left: 0em; 
 }
-#footer_main_menu > ul > li.sub_hover a {
-  background: #334d61; 
-}
+
 #footer_main_menu > ul > li > a {
   display: block;
   padding: 0;
-  text-align: center;
-  text-decoration: none;
   position: relative; 
   padding: 0 1em;
 }
 #footer_main_menu > ul > li > a span {
   display: block;
-  line-height: 2em; 
 }
-#footer_main_menu .sub-menu {
-  display: none;
-}
-
-/* Social Menu */
 
 ul#social_menu{
   float: right;
@@ -217,8 +182,6 @@ ul#social_menu li{
   float: left;
   margin: 1em 1em 1em;
 }
-
-/* Column View */
 
 .position-full .three_columns .column {
   width: 30em;
@@ -236,11 +199,8 @@ ul#social_menu li{
   width: 34em;
 }
 
-
-
 .column {
   float: left;
-  background: cyan;
   margin-left:2em;
 }
 
@@ -255,10 +215,9 @@ ul#social_menu li{
   margin-left: 0;
 }
 
-/* Advertising */
 
+/* Advertising */
 .ad{
-  background-color: green;
   margin: 2em auto;
 }
 
@@ -279,62 +238,139 @@ ul#social_menu li{
 
 
 
+/*****************************************************************************
+ * Website Colour scheme, typography, font-sizing
+*****************************************************************************/
 
-/* global styling */
+/*
+ * Header
+ */
 
-a:link, a:visited, a:hover, a:active{
-    text-decoration: none;
+#header {
+	font-family: Geneva, Verdana, "Lucida Sans", "Lucida Grande", sans-serif;
 }
 
-/* Global colour scheme
-
-*/
-
-/* Header */
 #header h1{
 	font-size:2em;
 	float:left;
 }
 
 #header h2{
-clear:right;
-float:left;
+  clear:right;
+  float:left;
 	font-size:1.2em;
 	margin:0em 0em 0em 1em;
 	line-height:2.1em;
 	font-weight:normal;
 }
 
+/*
+ * Main Menu
+ */
+
+/* Menu Item width */ 
+#header_main_menu > ul > li > a,
+#header_main_menu .sub-menu, 
+#header_main_menu .sub-menu li a{
+  width: 15em;
+}
+
+/* Main Menu: Height */
+#header_main_menu, #header_main_menu > ul > li > a{
+  height: 3em;
+}
+
+/* Main Menu: Top-level items */
+#header_main_menu > ul > li > a {
+  text-align: center;
+  color: #2a2a2a;
+}
+
+/* Main Menu: Top level Items: font-size and line-height */
+#header_main_menu > ul > li > a span{
+  line-height: 2.5em; 
+  font-size: 1.2em;
+}
+
+/* Colour of hovered item and submenu */
+#header_main_menu > ul > li.sub_hover a {
+  background: #ABABAB; 
+}
+
+/* Sub menu font-size and line-height */
+#header_main_menu .sub-menu a span{
+  font-size: 1.2em;
+  color: #2a2a2a;
+}
+
+/*
+ * Footer Menu
+ */
+/* Height of Menu Item */
+#footer_main_menu, #footer_main_menu > ul > li > a{
+  height: 2em;
+}
+
+/* Footer Menu: Top-level items */
+#footer_main_menu > ul > li > a {
+  text-align: center;
+}
+/* Footer menu: font-size and line-height */
+#footer_main_menu > ul > li > a span {
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+.sidebar{
+}
+
+.sidebar .widget{
+  padding: 1em 0em;
+}
+
+.sidebar .widget .widgettitle{
+  font-size: 1.4em;
+  margin: 1em 0;
+}
+
+.widget ul li{
+  margin-left: 2em;
+}
+.widget ul li a{
+  line-height: 1.5em;
+  font-size: 1.4em;
+}
+
+.widget_calendar{
+  padding: 0 2em;
+}
+.widget_calendar table{
+  width: 100%;
+}
+.widget_calendar table td, .widget_calendar table th{
+  height: 2em;
+  line-height: 2em;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.widget_calendar caption{
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+
+/* 
+ * global styling 
+ */
+
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+}
 
 /* Light Scheme */
 .light{
 	background-color:#e8e8e8;
-}
-
-.light #header h1{
-
-}
-.light #header h1 a{
-	color:#4e4e4e;
-}
-
-.light #all {
-	background-color: #f3f3f3;
-}
-.light .sidebar{
-	border-color:#6e6e6e;
-}
-.light #menu-top-menu a:link{
-	color:#4e4e4e;
-}
-.light #menu-top-menu a:visited{
-	color:#4e4e4e;
-}
-.light #menu-top-menu a:hover{
-	color:#a2a2a2;
-}
-.light #menu-top-menu a:active{
-	
 }
 
 /* Dark Scheme */
@@ -344,7 +380,10 @@ float:left;
 }
 
 
-/* general text formatting */
+/* 
+ *general post/page text formatting 
+ */
+ 
 h2.title{
 	font-size:2em;
 }
@@ -417,7 +456,6 @@ h2.title{
   margin: 0;
   padding: 0 0.4em 0.5em;
 }
-
 
 .entry a:link{
 }

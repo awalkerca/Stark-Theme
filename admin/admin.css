@@ -70,6 +70,10 @@
   float: left;
 }
 
+.custom_theme_options input[type=text]{
+  width: 25em;
+}
+
 .custom_theme_options select{
   width: 25em;
 }
@@ -90,3 +94,4 @@
   height: 1.8em;
   line-height: 1.8em;
 }
+

@@ -307,6 +307,13 @@
         'std'           => '0'
       );
       
+      $this->settings['content_slider_height'] = array(
+        'section'       => 'content_slider',
+        'title'         => 'Slider Height',
+        'desc'          => 'How tall (in pixels) should the Content Slider be?',
+        'type'          => 'text',
+        'std'           => '180'
+      );
       
       
    }
@@ -322,14 +329,15 @@
     
     public function load_scripts(){
       wp_enqueue_script('jquery-ui-tabs');
+      wp_enqueue_script('jquery-ui-slider');
       wp_enqueue_script('admin_options_script',get_bloginfo('template_directory') . '/admin/admin.js');
       wp_enqueue_script('styled-checkbox',get_bloginfo('template_directory') . '/admin/styled_checkbox.js');
     }
 
     public function load_styles(){
       wp_enqueue_style('admin_options',get_bloginfo('template_directory') . '/admin/admin.css');
-    }
-    
+      // wp_enqueue_style('jqueryui_smoothness',get_bloginfo('template_directory') . '/admin/smoothness/jquery-ui-1.8.17.custom.css');
+    }    
         
     /* add pages to admin menu */
     public function add_pages(){                    
@@ -481,7 +489,7 @@
         	break;
         case 'text':
         default:
-          echo '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="'. THEME_OPTIONS . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" />';
+          echo '<input ' . $field_class . ' type="text" id="' . $id . '" name="'. THEME_OPTIONS . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" />';
           if ($desc != ''){
             echo '<span class="description">' . $desc. '</span>';
           }

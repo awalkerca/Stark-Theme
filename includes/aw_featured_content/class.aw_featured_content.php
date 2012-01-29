@@ -71,8 +71,8 @@
           $content_class = 'position-left';
       }
            
-      $content .= '<div class="featured_content" data-duration="' . $this->get_slider_duration() . '">';
-      $content_list .= '<ol class="content_summary_list ui-tabs-nav '. $menu_class . '">';
+      $content .= '<div class="featured_content" data-duration="' . $this->get_slider_duration() . '" style="height:' . theme_option('content_slider_height') . 'px;">';
+      $content_list .= '<ol class="content_summary_list ui-tabs-nav '. $menu_class . '" style="height:' . theme_option('content_slider_height') .'px;">';
       $fc_query = new WP_Query($args);
       $ctr = 0;
       
@@ -87,7 +87,7 @@
         $title = get_the_title($post_id);
         $item_height = ((100 / $fc_query->post_count));
         $content_list .= '<li class="list_item ui-tabs-nav-item " style="height:'. $item_height .'%;">';
-        $content_list .= '<a href="#'. $featured_post_id .'">' . $title .'</a>';
+        $content_list .= '<a href="#'. $featured_post_id .'"><span>' . $title .'</span></a>';
         $content_list .= '</li>';
         if (theme_option('content_slider_content') == 'content'){          
           $desc = get_the_content($post_id);          

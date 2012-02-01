@@ -44,6 +44,6 @@ add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 add_action( 'admin_menu', 'my_admin_menu' );
 add_action('admin_init','enable_post_categories');
 add_filter( 'admin_footer_text', 'my_admin_footer_text' );
-add_filter('login_errors', create_function('$a', "return null;"));
+add_filter('login_errors', create_function('$a', "return 'Oops, Please try again.';"));
 add_filter('body_class','add_body_color_scheme');
 ?>
